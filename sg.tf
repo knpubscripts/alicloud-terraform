@@ -1,5 +1,5 @@
 resource "alicloud_security_group" "sg" {
-  name   = "kndemo-sg"
+  name   = var.sgroup_name
   vpc_id = alicloud_vpc.vpc.id
 }
 

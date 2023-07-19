@@ -11,7 +11,7 @@ variable "secret_key" {
 }
 
 variable "profile" {
-  default = "demoProfile"
+  default = "internalAK"
 }
 
 variable "image_id" {
@@ -22,6 +22,14 @@ variable "region" {
   default = "ap-southeast-1"
 }
 
+variable "vpc_name" {
+  default = "demo-vpc"
+}
+
+variable "sgroup_name" {
+  default = "kdemosg"
+}
+
 variable "zonea" {
   default = "ap-southeast-1a"
 }
@@ -30,20 +38,44 @@ variable "zoneb" {
   default = "ap-southeast-1b"
 }
 
+variable "key_pair_name" {
+  default = "k8s_worker_keys_demo"
+}
+
+variable "key_file" {
+  default = "PATH TO PUB FILE .../id_rsa.pub"
+}
+
+variable "scaling_min" {
+  default = "1"
+}
+
+variable "scaling_max" {
+  default = "10"
+}
+
+variable "scaling_desired_size" {
+  default = "1"
+}
+
 variable "cidr_block" {
-  default = "10.11.0.0/16"
+  default = "10.111.0.0/16"
 }
 
 variable "vswitch_cidr_block" {
-  default = "10.11.0.0/24"
+  default = "10.111.0.0/24"
 }
 
 variable "vswitch_cidr_block2" {
-  default = "10.11.3.0/24"
+  default = "10.111.3.0/24"
+}
+
+variable "vswitch_cidrs" {
+  default = ["10.111.0.0/24", "10.111.3.0/24"]
 }
 
 variable "ecs_password" {
-  default = "EnterPasswordECShere"
+  default = "PASSWORD HERE"
 }
 
 variable "database_user_name" {
@@ -51,7 +83,7 @@ variable "database_user_name" {
 }
 
 variable "database_user_password" {
-  default = "EnterDBPasswordHere"
+  default = "PASSWORD HERE"
 }
 
 variable "database_name" {
@@ -59,9 +91,54 @@ variable "database_name" {
 }
 
 variable "role" {
-  default = "demorole"
+  default = "devops"
 }
 
 variable "db_security_ips" {
-  default = "10.1.0.0/16"
+  default = "10.111.0.0/16"
+}
+
+variable "pod_cidr" {
+  default = "172.20.0.0/16"
+}
+
+variable "service_cidr" {
+  default = "172.21.0.0/20"
+}
+
+variable "k8s_version" {
+  default = "1.26.3-aliyun.1"
+}
+
+variable "k8s_name" {
+  default = "demok8s"
+}
+
+variable "container_runtime" {
+  default = "docker"
+}
+
+
+variable "container_version" {
+  default = "1.26"
+}
+
+variable "cluster_spec" {
+  default = "ack.pro.small"
+}
+
+variable "proxy_mode" {
+  default = "iptables"
+}
+
+variable "node_cidr_mask" {
+  default = "24"
+}
+
+variable "worker_instance_types" {
+  default = ["ecs.g7.large"]
+}
+
+variable "worker_instance_charge_type" {
+  default = "PostPaid"
 }
