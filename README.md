@@ -9,8 +9,11 @@ This repository contains
 - sg.tf
 - mysql.tf
 - ecs.tf
+- var.tf.example
 
 ## How to use it
+
+Copy file var.tf.example to new file name var.tf, then enter the information to var.tf file.
 
 ### Init terraform
 
