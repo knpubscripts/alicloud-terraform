@@ -1,0 +1,67 @@
+variable "short_name" {
+  default = "demo"
+}
+
+variable "access_key" {
+  default = ""
+}
+
+variable "secret_key" {
+  default = ""
+}
+
+variable "profile" {
+  default = "demoProfile"
+}
+
+variable "image_id" {
+  default = "ubuntu_22_04_uefi_x64_20G_alibase_20230515.vhd"
+}
+
+variable "region" {
+  default = "ap-southeast-1"
+}
+
+variable "zonea" {
+  default = "ap-southeast-1a"
+}
+
+variable "zoneb" {
+  default = "ap-southeast-1b"
+}
+
+variable "cidr_block" {
+  default = "10.11.0.0/16"
+}
+
+variable "vswitch_cidr_block" {
+  default = "10.11.0.0/24"
+}
+
+variable "vswitch_cidr_block2" {
+  default = "10.11.3.0/24"
+}
+
+variable "ecs_password" {
+  default = "EnterPasswordECShere"
+}
+
+variable "database_user_name" {
+  default = "demoadmin"
+}
+
+variable "database_user_password" {
+  default = "EnterDBPasswordHere"
+}
+
+variable "database_name" {
+  default = "demodb"
+}
+
+variable "role" {
+  default = "demorole"
+}
+
+variable "db_security_ips" {
+  default = "10.1.0.0/16"
+}

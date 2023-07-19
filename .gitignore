@@ -1,0 +1,5 @@
+.terraform*
+terraform.tf*
+*.pub
+*kn
+var.tf
