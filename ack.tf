@@ -14,7 +14,7 @@ resource "alicloud_cs_managed_kubernetes" "k8s" {
 
 
 resource "alicloud_cs_kubernetes_node_pool" "nodepool" {
-  name                  = "${alicloud_cs_managed_kubernetes.k8s}-node-pool"
+  name                  = "${alicloud_cs_managed_kubernetes.k8s.name}-node-pool"
   cluster_id            = alicloud_cs_managed_kubernetes.k8s.id
   depends_on            = [alicloud_vpc.vpc, alicloud_vswitch.vsw1, alicloud_vswitch.vsw1, alicloud_cs_managed_kubernetes.k8s]
   vswitch_ids           = [alicloud_vswitch.vsw1.id, alicloud_vswitch.vsw2.id]
