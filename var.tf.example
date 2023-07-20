@@ -116,12 +116,11 @@ variable "k8s_name" {
 }
 
 variable "container_runtime" {
-  default = "docker"
+  default = "containerd"
 }
 
-
 variable "container_version" {
-  default = "1.26"
+  default = "1.6.20"
 }
 
 variable "cluster_spec" {
