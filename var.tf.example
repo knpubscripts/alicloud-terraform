@@ -98,12 +98,13 @@ variable "db_security_ips" {
   default = "10.111.0.0/16"
 }
 
+
 variable "pod_cidr" {
-  default = "172.20.0.0/16"
+  default = "172.16.0.0/12"
 }
 
 variable "service_cidr" {
-  default = "172.21.0.0/20"
+  default = "192.168.0.0/20"
 }
 
 variable "k8s_version" {
